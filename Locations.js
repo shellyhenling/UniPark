@@ -15,20 +15,26 @@ export class Locations extends Component {
   render() {
     return (
       <View>
-        <Text>Please select your desired parking area</Text>    
-        {/* dont need this really <Button onPress={() => this.props.navigation.navigate('HomeScreen')} title="Home"/>  */}
+        <Text style= {{ fontSize: 18, fontWeight : 'bold' , color: 'black' , textAlign: 'center'}}>
+        Please select your desired parking area
+        </Text>    
+        
         
         <Button onPress={showAlert}  
          title="Location 1" 
+         color="#428ff4"
          />
          <Button onPress={showAlert} 
          title="Location 2" 
+         color="#428ff4"
          />
          <Button onPress={showAlert} 
          title="Location 3" 
+         color="#428ff4"
          />
          <Button onPress={showAlert} 
          title="Location 4" 
+         color="#428ff4"
          />
       
       </View>

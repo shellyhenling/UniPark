@@ -12,8 +12,36 @@ import Locations from './Locations';
 import Home from './Home';
 
 const AppNavigator = createStackNavigator({
-  HomeScreen: { screen: Home },
-  LocationScreen: { screen: Locations }
+  HomeScreen: { screen: Home,
+    navigationOptions: () => ({
+    title: 'Home',
+    headerStyle: {
+      backgroundColor: '#428ff4',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
+    headerBackTitle: 'Home',
+
+
+    }),
+
+   },
+  LocationScreen: { 
+    screen: Locations,
+    navigationOptions: () => ({
+    title : 'Locations',
+    headerStyle: {
+      backgroundColor: '#428ff4',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
+    headerBackTitle: 'Locations',
+    }),
+  }
 });
 
 export default class App extends Component {
