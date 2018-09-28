@@ -10,9 +10,11 @@ import {
 import { createStackNavigator } from 'react-navigation';
 import Locations from './Locations';
 import Home from './Home';
+import Location1 from './Location1'
 
 const AppNavigator = createStackNavigator({
-  HomeScreen: { screen: Home,
+  HomeScreen: { 
+    screen: Home,
     navigationOptions: () => ({
     title: 'Home',
     headerStyle: {
@@ -41,6 +43,21 @@ const AppNavigator = createStackNavigator({
     },
     headerBackTitle: 'Locations',
     }),
+  },
+  Location1: {
+    screen: Location1,
+    navigationOptions: () => ({
+    title : 'Location 1',
+    headerStyle: {
+      backgroundColor: '#428ff4',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
+    }),
+
+
   }
 });
 
