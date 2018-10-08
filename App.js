@@ -8,9 +8,17 @@ import {
   View
 } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
+
+import firebase from 'firebase';
 import Locations from './Locations';
 import Home from './Home';
 import Location1 from './Location1'
+import ListItem from './ListItem'
+import Spot from './Spot'
+
+import { YellowBox } from 'react-native';
+
+YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
 
 const AppNavigator = createStackNavigator({
   HomeScreen: { 
@@ -44,10 +52,10 @@ const AppNavigator = createStackNavigator({
     headerBackTitle: 'Locations',
     }),
   },
-  Location1: {
-    screen: Location1,
+  Spot: {
+    screen: Spot,
     navigationOptions: () => ({
-    title : 'Location 1',
+    title : 'Location 1 Spots',
     headerStyle: {
       backgroundColor: '#428ff4',
     },
@@ -60,6 +68,9 @@ const AppNavigator = createStackNavigator({
 
   }
 });
+
+
+
 
 export default class App extends Component {
   render() {

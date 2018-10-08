@@ -2,8 +2,15 @@
 
 import React, { Component } from 'react';
 import { View, Text , Button, Image} from 'react-native';
+import { db } from './db';
+
+
+
+let Spots = db.ref('/unipark-4ad6c');
+      
 
 export class Location1 extends Component {
+
   render() {
     return (
       <View>
@@ -14,6 +21,8 @@ export class Location1 extends Component {
           source={{uri: 'http://www.speedworlddragway.com/wp-content/uploads/2015/06/Car-Park.jpg'}}
           resizeMode= "center"
         />
+       
+
       </View>
     )
   }

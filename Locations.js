@@ -20,7 +20,7 @@ export class Locations extends Component {
         </Text>    
         
         
-        <Button onPress={() => this.props.navigation.navigate('Location1')}
+        <Button onPress={() => this.props.navigation.navigate('Spot')}
          title="Location 1" 
          color="#428ff4"
          />
