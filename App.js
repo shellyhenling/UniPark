@@ -1,16 +1,13 @@
-// App.js
-
-import React, { Component } from 'react';
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import { Component } from 'react';
 import { createStackNavigator } from 'react-navigation';
-import Locations from './Locations';
+import React from 'react';
 import Home from './Home';
-import Location1 from './Location1'
+import About from './About';
+import Locations from './Locations';
+import Location1 from './Location1';
+import Location2 from './Location2';
+import Location3 from './Location3';
+import Location4 from './Location4';
 
 const AppNavigator = createStackNavigator({
   HomeScreen: { 
@@ -18,24 +15,35 @@ const AppNavigator = createStackNavigator({
     navigationOptions: () => ({
     title: 'Home',
     headerStyle: {
-      backgroundColor: '#428ff4',
+      backgroundColor: '#70bcff',
     },
     headerTintColor: '#fff',
     headerTitleStyle: {
       fontWeight: 'bold',
     },
     headerBackTitle: 'Home',
-
-
     }),
-
    },
+   About: { 
+    screen: About,
+    navigationOptions: () => ({
+    title : 'Locations',
+    headerStyle: {
+      backgroundColor: '#70bcff',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
+    headerBackTitle: 'Locations',
+    }),
+  },
   LocationScreen: { 
     screen: Locations,
     navigationOptions: () => ({
     title : 'Locations',
     headerStyle: {
-      backgroundColor: '#428ff4',
+      backgroundColor: '#70bcff',
     },
     headerTintColor: '#fff',
     headerTitleStyle: {
@@ -49,15 +57,52 @@ const AppNavigator = createStackNavigator({
     navigationOptions: () => ({
     title : 'Location 1',
     headerStyle: {
-      backgroundColor: '#428ff4',
+      backgroundColor: '#70bcff',
     },
     headerTintColor: '#fff',
     headerTitleStyle: {
       fontWeight: 'bold',
     },
     }),
-
-
+  },
+  Location2: {
+    screen: Location2,
+    navigationOptions: () => ({
+    title : 'Location 2',
+    headerStyle: {
+      backgroundColor: '#70bcff',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
+    }),
+  },
+  Location3: {
+    screen: Location3,
+    navigationOptions: () => ({
+    title : 'Location 3',
+    headerStyle: {
+      backgroundColor: '#70bcff',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
+    }),
+  },
+  Location4: {
+    screen: Location4,
+    navigationOptions: () => ({
+    title : 'Location 4',
+    headerStyle: {
+      backgroundColor: '#70bcff',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
+    }),
   }
 });
 
