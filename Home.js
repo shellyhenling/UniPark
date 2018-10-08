@@ -1,23 +1,41 @@
-// Home.js
-
 import React, { Component } from 'react';
-import { View, Text , Button, Image} from 'react-native';
+import { View, Text , Image, ScrollView} from 'react-native';
+import { Button } from 'react-native-elements';
 
 export class Home extends Component {
   render() {
     return (
-      <View>
-        <Text style= {{ lineHeight: 50 , fontSize: 30, fontWeight : 'bold' , color: 'black' , textAlign: 'center'}}>
-        Uni-Park</Text>
-        <Image
-          style={{width: 375, height: 300}}
-          source={{uri: 'http://www.speedworlddragway.com/wp-content/uploads/2015/06/Car-Park.jpg'}}
-          resizeMode= "center"
-        />
-        <Button onPress={() => this.props.navigation.navigate('LocationScreen')} title="Locations"
-        color="#428ff4"
-        />
-      </View>
+      <ScrollView>
+        <View style={{padding: 20, alignContent: 'center'}}>
+          <Image 
+            style={{width: 332, height: 399}}
+            source={require('./Picture1.png')}
+            alignContent='center'
+          />
+         <Text></Text>
+            <Button 
+              onPress={() => this.props.navigation.navigate('LocationScreen')} title="Locations"
+              icon={{name: 'add-location'}}
+              fontSize={21}
+              backgroundColor="#70bcff"
+              padding={10}
+              rounded={false}
+              borderRadius={10}
+              size={15}
+            />
+            <Text></Text>
+            <Button 
+              onPress={() => this.props.navigation.navigate('About')} title="About"
+              icon={{name: 'book'}}
+              fontSize={21}
+              backgroundColor="#70bcff"
+              padding={10}
+              rounded={false}
+              borderRadius={10}
+              size={15}
+            />
+        </View>
+      </ScrollView>
     )
   }
 }
