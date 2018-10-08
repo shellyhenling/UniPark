@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { createStackNavigator } from 'react-navigation';
+import { YellowBox } from 'react-native';
 import React from 'react';
 import Home from './Home';
 import About from './About';
@@ -8,6 +9,8 @@ import Location1 from './Location1';
 import Location2 from './Location2';
 import Location3 from './Location3';
 import Location4 from './Location4';
+
+YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
 
 const AppNavigator = createStackNavigator({
   HomeScreen: { 
@@ -27,7 +30,7 @@ const AppNavigator = createStackNavigator({
    About: { 
     screen: About,
     navigationOptions: () => ({
-    title : 'Locations',
+    title : 'About',
     headerStyle: {
       backgroundColor: '#70bcff',
     },
@@ -35,7 +38,7 @@ const AppNavigator = createStackNavigator({
     headerTitleStyle: {
       fontWeight: 'bold',
     },
-    headerBackTitle: 'Locations',
+    headerBackTitle: 'About',
     }),
   },
   LocationScreen: { 

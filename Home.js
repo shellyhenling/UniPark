@@ -9,7 +9,7 @@ export class Home extends Component {
         <View style={{padding: 20, alignContent: 'center'}}>
           <Image 
             style={{width: 332, height: 399}}
-            source={require('./Picture1.png')}
+            source={require('./Logo2.png')}
             alignContent='center'
           />
          <Text></Text>
