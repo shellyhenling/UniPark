@@ -14,7 +14,8 @@ export class Home extends Component {
           />
          <Text></Text>
             <Button 
-              onPress={() => this.props.navigation.navigate('LocationScreen')} title="Locations"
+              onPress={() => this.props.navigation.navigate('LocationScreen')} 
+              title="Locations"
               icon={{name: 'add-location'}}
               fontSize={21}
               backgroundColor="#70bcff"
@@ -25,7 +26,8 @@ export class Home extends Component {
             />
             <Text></Text>
             <Button 
-              onPress={() => this.props.navigation.navigate('About')} title="About"
+              onPress={() => this.props.navigation.navigate('About')} 
+              title="About"
               icon={{name: 'book'}}
               fontSize={21}
               backgroundColor="#70bcff"

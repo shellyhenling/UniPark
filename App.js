@@ -9,6 +9,8 @@ import Location1 from './Location1';
 import Location2 from './Location2';
 import Location3 from './Location3';
 import Location4 from './Location4';
+import Villanova from './Villanova';
+import IthanGarage from './IthanGarage';
 
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
 
@@ -53,6 +55,34 @@ const AppNavigator = createStackNavigator({
       fontWeight: 'bold',
     },
     headerBackTitle: 'Locations',
+    }),
+  },
+  Villanova: { 
+    screen: Villanova,
+    navigationOptions: () => ({
+    title : 'Villanova',
+    headerStyle: {
+      backgroundColor: '#70bcff',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
+    headerBackTitle: 'Villanova',
+    }),
+  },
+  IthanGarage: { 
+    screen: IthanGarage,
+    navigationOptions: () => ({
+    title : 'Ithan Garage',
+    headerStyle: {
+      backgroundColor: '#70bcff',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
+    headerBackTitle: 'Ithan Garage',
     }),
   },
   Location1: {

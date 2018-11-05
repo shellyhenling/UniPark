@@ -27,8 +27,8 @@ export class Locations extends Component {
           </Text>    
           <Text></Text>
           <Text></Text>
-          <Button onPress={() => this.props.navigation.navigate('Location1')}
-          title="South Campus Parking Garage" 
+          <Button onPress={() => this.props.navigation.navigate('Villanova')}
+          title="Villanova University" 
           color="#FFF"
           icon={{name: 'directions-car'}}
           fontSize={21}
@@ -40,7 +40,7 @@ export class Locations extends Component {
           />
           <Text></Text>
           <Button onPress={() => this.props.navigation.navigate('Location2')}
-          title="West Campus Parking" 
+          title="Location 2" 
           color="#FFF"
           icon={{name: 'directions-car'}}
           fontSize={21}
@@ -52,7 +52,7 @@ export class Locations extends Component {
           />
           <Text></Text>
           <Button onPress={() => this.props.navigation.navigate('Location3')} 
-          title="Main Campus Parking" 
+          title="Location 3" 
           color="#FFF"
           icon={{name: 'directions-car'}}
           fontSize={21}
@@ -64,7 +64,7 @@ export class Locations extends Component {
           />
           <Text></Text>
           <Button onPress={() => this.props.navigation.navigate('Location4')}
-          title="SAC Parking Garage" 
+          title="Location 4" 
           color="#FFF"
           icon={{name: 'directions-car'}}
           fontSize={21}
