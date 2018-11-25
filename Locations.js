@@ -40,7 +40,7 @@ export class Locations extends Component {
           />
           <Text></Text>
           <Button onPress={showAlert}
-          title="Location 2" 
+          title="Giant" 
           color="#FFF"
           icon={{name: 'directions-car'}}
           fontSize={21}
@@ -52,7 +52,7 @@ export class Locations extends Component {
           />
           <Text></Text>
           <Button Button onPress={showAlert}
-          title="Location 3" 
+          title="Suburban Square" 
           color="#FFF"
           icon={{name: 'directions-car'}}
           fontSize={21}
@@ -64,7 +64,7 @@ export class Locations extends Component {
           />
           <Text></Text>
           <Button onPress={showAlert}
-          title="Location 4" 
+          title="King of Prussia" 
           color="#FFF"
           icon={{name: 'directions-car'}}
           fontSize={21}
