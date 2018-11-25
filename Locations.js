@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { View, Text, Image, ScrollView } from 'react-native';
+import { View, Text, Image, Alert, ScrollView } from 'react-native';
 import { Button } from 'react-native-elements';
 
 const showAlert = () => {
       Alert.alert(
-         "Now we show the Location!"
+        "Oops! Location still under development"
       )
    }
 
@@ -39,7 +39,7 @@ export class Locations extends Component {
           size={15}
           />
           <Text></Text>
-          <Button onPress={() => this.props.navigation.navigate('Location2')}
+          <Button onPress={showAlert}
           title="Location 2" 
           color="#FFF"
           icon={{name: 'directions-car'}}
@@ -51,7 +51,7 @@ export class Locations extends Component {
           size={15}
           />
           <Text></Text>
-          <Button onPress={() => this.props.navigation.navigate('Location3')} 
+          <Button Button onPress={showAlert}
           title="Location 3" 
           color="#FFF"
           icon={{name: 'directions-car'}}
@@ -63,7 +63,7 @@ export class Locations extends Component {
           size={15}
           />
           <Text></Text>
-          <Button onPress={() => this.props.navigation.navigate('Location4')}
+          <Button onPress={showAlert}
           title="Location 4" 
           color="#FFF"
           icon={{name: 'directions-car'}}

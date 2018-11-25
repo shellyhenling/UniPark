@@ -1,5 +1,3 @@
-// Settings.js
-
 import React, { Component } from 'react';
 import { View, Text, Alert, Image, ScrollView } from 'react-native';
 import { Button } from 'react-native-elements';
@@ -8,7 +6,7 @@ import { Button } from 'react-native-elements';
 
 const showAlert = () => {
       Alert.alert(
-         "Now we show the Location!"
+         "Oops! Location still under development"
       )
    }
 
