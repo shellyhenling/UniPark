@@ -1,7 +1,6 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { createStackNavigator } from 'react-navigation';
 import { YellowBox } from 'react-native';
-import React from 'react';
 import Home from './Home';
 import About from './About';
 import Locations from './Locations';

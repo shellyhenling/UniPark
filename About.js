@@ -1,5 +1,3 @@
-// Settings.js
-
 import React, { Component } from 'react';
 import { View, Text, Image, ScrollView } from 'react-native';
 import { Tile } from 'react-native-elements';

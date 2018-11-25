@@ -20,20 +20,17 @@ export class Locations extends Component {
                 flex='true'
               />
           </View>
-          <Text></Text>
-          <Text></Text>
-          <Text style= {{ fontSize: 18, fontWeight : 'bold' , color: 'black' , textAlign: 'center'}}>
+
+          <Text style= {{ fontSize: 18, fontWeight : 'bold' , color: 'black' , textAlign: 'center', paddingBottom: 40, paddingTop: 20}}>
           Please select your desired parking area
-          </Text>    
-          <Text></Text>
-          <Text></Text>
+          </Text>
+
           <Button onPress={() => this.props.navigation.navigate('Villanova')}
           title="Villanova University" 
           color="#FFF"
           icon={{name: 'directions-car'}}
           fontSize={21}
           backgroundColor="#70bcff"
-          padding={10}
           rounded={false}
           borderRadius={10}
           size={15}
@@ -45,7 +42,6 @@ export class Locations extends Component {
           icon={{name: 'directions-car'}}
           fontSize={21}
           backgroundColor="#70bcff"
-          padding={10}
           rounded={false}
           borderRadius={10}
           size={15}
@@ -57,7 +53,6 @@ export class Locations extends Component {
           icon={{name: 'directions-car'}}
           fontSize={21}
           backgroundColor="#70bcff"
-          padding={10}
           rounded={false}
           borderRadius={10}
           size={15}
@@ -69,12 +64,11 @@ export class Locations extends Component {
           icon={{name: 'directions-car'}}
           fontSize={21}
           backgroundColor="#70bcff"
-          padding={10}
           rounded={false}
           borderRadius={10}
           size={15}
           />
-         </ScrollView>
+        </ScrollView>
       </View>
     )
   }
