@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { View, Text, Image, ScrollView } from 'react-native';
+import { View, Text, Image, Alert, ScrollView } from 'react-native';
 import { Button } from 'react-native-elements';
 
 const showAlert = () => {
       Alert.alert(
-         "Now we show the Location!"
+        "Oops! Location still under development"
       )
    }
 
@@ -20,61 +20,55 @@ export class Locations extends Component {
                 flex='true'
               />
           </View>
-          <Text></Text>
-          <Text></Text>
-          <Text style= {{ fontSize: 18, fontWeight : 'bold' , color: 'black' , textAlign: 'center'}}>
+
+          <Text style= {{ fontSize: 18, fontWeight : 'bold' , color: 'black' , textAlign: 'center', paddingBottom: 40, paddingTop: 20}}>
           Please select your desired parking area
-          </Text>    
-          <Text></Text>
-          <Text></Text>
-          <Button onPress={() => this.props.navigation.navigate('Location1')}
-          title="South Campus Parking Garage" 
+          </Text>
+
+          <Button onPress={() => this.props.navigation.navigate('Villanova')}
+          title="Villanova University" 
           color="#FFF"
           icon={{name: 'directions-car'}}
           fontSize={21}
           backgroundColor="#70bcff"
-          padding={10}
           rounded={false}
           borderRadius={10}
           size={15}
           />
           <Text></Text>
-          <Button onPress={() => this.props.navigation.navigate('Location2')}
-          title="West Campus Parking" 
+          <Button onPress={showAlert}
+          title="Giant Grocery Store" 
           color="#FFF"
           icon={{name: 'directions-car'}}
           fontSize={21}
           backgroundColor="#70bcff"
-          padding={10}
           rounded={false}
           borderRadius={10}
           size={15}
           />
           <Text></Text>
-          <Button onPress={() => this.props.navigation.navigate('Location3')} 
-          title="Main Campus Parking" 
+          <Button Button onPress={showAlert}
+          title="Suburban Square" 
           color="#FFF"
           icon={{name: 'directions-car'}}
           fontSize={21}
           backgroundColor="#70bcff"
-          padding={10}
           rounded={false}
           borderRadius={10}
           size={15}
           />
           <Text></Text>
-          <Button onPress={() => this.props.navigation.navigate('Location4')}
-          title="SAC Parking Garage" 
+          <Button onPress={showAlert}
+          title="King of Prussia" 
           color="#FFF"
           icon={{name: 'directions-car'}}
           fontSize={21}
           backgroundColor="#70bcff"
-          padding={10}
           rounded={false}
           borderRadius={10}
           size={15}
           />
-         </ScrollView>
+        </ScrollView>
       </View>
     )
   }

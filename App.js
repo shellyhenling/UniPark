@@ -1,14 +1,11 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { createStackNavigator } from 'react-navigation';
 import { YellowBox } from 'react-native';
-import React from 'react';
 import Home from './Home';
 import About from './About';
 import Locations from './Locations';
-import Location1 from './Location1';
-import Location2 from './Location2';
-import Location3 from './Location3';
-import Location4 from './Location4';
+import Villanova from './Villanova';
+import IthanGarage from './IthanGarage';
 
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
 
@@ -27,7 +24,7 @@ const AppNavigator = createStackNavigator({
     headerBackTitle: 'Home',
     }),
    },
-   About: { 
+  About: { 
     screen: About,
     navigationOptions: () => ({
     title : 'About',
@@ -55,10 +52,10 @@ const AppNavigator = createStackNavigator({
     headerBackTitle: 'Locations',
     }),
   },
-  Location1: {
-    screen: Location1,
+  Villanova: { 
+    screen: Villanova,
     navigationOptions: () => ({
-    title : 'Location 1',
+    title : 'Villanova',
     headerStyle: {
       backgroundColor: '#70bcff',
     },
@@ -66,12 +63,13 @@ const AppNavigator = createStackNavigator({
     headerTitleStyle: {
       fontWeight: 'bold',
     },
+    headerBackTitle: 'Villanova',
     }),
   },
-  Location2: {
-    screen: Location2,
+  IthanGarage: { 
+    screen: IthanGarage,
     navigationOptions: () => ({
-    title : 'Location 2',
+    title : 'Ithan Garage',
     headerStyle: {
       backgroundColor: '#70bcff',
     },
@@ -79,32 +77,7 @@ const AppNavigator = createStackNavigator({
     headerTitleStyle: {
       fontWeight: 'bold',
     },
-    }),
-  },
-  Location3: {
-    screen: Location3,
-    navigationOptions: () => ({
-    title : 'Location 3',
-    headerStyle: {
-      backgroundColor: '#70bcff',
-    },
-    headerTintColor: '#fff',
-    headerTitleStyle: {
-      fontWeight: 'bold',
-    },
-    }),
-  },
-  Location4: {
-    screen: Location4,
-    navigationOptions: () => ({
-    title : 'Location 4',
-    headerStyle: {
-      backgroundColor: '#70bcff',
-    },
-    headerTintColor: '#fff',
-    headerTitleStyle: {
-      fontWeight: 'bold',
-    },
+    headerBackTitle: 'Ithan Garage',
     }),
   }
 });
