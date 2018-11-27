@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { View, Text, Image, ScrollView } from 'react-native';
 import { ButtonGroup, Badge } from 'react-native-elements';
 import { db } from './db'
-import zero from './spotlayout.png';
-import  one from './one.png';
-import two from './two.jpg';
+import zero from './spotlayout1.png';
+import  one from './spotlayout1.png';
+import two from './spotlayout1.png';
 
 const component1 = () => <Text>Floor 1</Text>
 const component2 = () => <Text>Floor 2</Text>
@@ -52,7 +52,16 @@ export class IthanGarage extends Component {
     Spot21: 'False',
     Spot22: 'False',
     Spot23: 'False',
-    Spot24: 'False'
+    Spot24: 'False',
+    Spot25: 'False',
+    Spot26: 'False',
+    Spot27: 'False',
+    Spot28: 'False',
+    Spot29: 'False',
+    Spot30: 'False',
+    Spot31: 'False',
+    Spot32: 'False',
+    Spot33: 'False'
   }
   Spot1Ref = db.ref('/Floor1/Spot1')
   Spot2Ref = db.ref('/Floor1/Spot2')
@@ -62,22 +71,31 @@ export class IthanGarage extends Component {
   Spot6Ref = db.ref('/Floor1/Spot6')
   Spot7Ref = db.ref('/Floor1/Spot7')
   Spot8Ref = db.ref('/Floor1/Spot8')
-  Spot9Ref = db.ref('/Floor2/Spot9')
-  Spot10Ref = db.ref('/Floor2/Spot10')
-  Spot11Ref = db.ref('/Floor2/Spot11')
+  Spot9Ref = db.ref('/Floor1/Spot9')
+  Spot10Ref = db.ref('/Floor1/Spot10')
+  Spot11Ref = db.ref('/Floor1/Spot11')
   Spot12Ref = db.ref('/Floor2/Spot12')
   Spot13Ref = db.ref('/Floor2/Spot13')
   Spot14Ref = db.ref('/Floor2/Spot14')
   Spot15Ref = db.ref('/Floor2/Spot15')
   Spot16Ref = db.ref('/Floor2/Spot16')
-  Spot17Ref = db.ref('/Floor3/Spot17')
-  Spot18Ref = db.ref('/Floor3/Spot18')
-  Spot19Ref = db.ref('/Floor3/Spot19')
-  Spot20Ref = db.ref('/Floor3/Spot20')
-  Spot21Ref = db.ref('/Floor3/Spot21')
-  Spot22Ref = db.ref('/Floor3/Spot22')
+  Spot17Ref = db.ref('/Floor2/Spot17')
+  Spot18Ref = db.ref('/Floor2/Spot18')
+  Spot19Ref = db.ref('/Floor2/Spot19')
+  Spot20Ref = db.ref('/Floor2/Spot20')
+  Spot21Ref = db.ref('/Floor2/Spot21')
+  Spot22Ref = db.ref('/Floor2/Spot22')
   Spot23Ref = db.ref('/Floor3/Spot23')
   Spot24Ref = db.ref('/Floor3/Spot24')
+  Spot25Ref = db.ref('/Floor3/Spot25')
+  Spot26Ref = db.ref('/Floor3/Spot26')
+  Spot27Ref = db.ref('/Floor3/Spot27')
+  Spot28Ref = db.ref('/Floor3/Spot28')
+  Spot29Ref = db.ref('/Floor3/Spot29')
+  Spot30Ref = db.ref('/Floor3/Spot30')
+  Spot31Ref = db.ref('/Floor3/Spot31')
+  Spot32Ref = db.ref('/Floor3/Spot32')
+  Spot33Ref = db.ref('/Floor3/Spot33')
 
 
   componentWillMount(){
@@ -201,6 +219,51 @@ export class IthanGarage extends Component {
         Spot24: snapshot.val() 
       })
     })
+    this.Spot25Ref.on('value', snapshot=> {
+      this.setState({
+        Spot25: snapshot.val() 
+      })
+    })
+    this.Spot26Ref.on('value', snapshot=> {
+      this.setState({
+        Spot26: snapshot.val()
+      })
+    })
+    this.Spot27Ref.on('value', snapshot=> {
+      this.setState({
+        Spot27: snapshot.val() 
+      })
+    })
+    this.Spot28Ref.on('value', snapshot=> {
+      this.setState({
+        Spot28: snapshot.val() 
+      })
+    })
+    this.Spot29Ref.on('value', snapshot=> {
+      this.setState({
+        Spot29: snapshot.val() 
+      })
+    })
+    this.Spot30Ref.on('value', snapshot=> {
+      this.setState({
+        Spot30: snapshot.val() 
+      })
+    })
+    this.Spot31Ref.on('value', snapshot=> {
+      this.setState({
+        Spot31: snapshot.val() 
+      })
+    })
+    this.Spot32Ref.on('value', snapshot=> {
+      this.setState({
+        Spot32: snapshot.val() 
+      })
+    })
+    this.Spot33Ref.on('value', snapshot=> {
+      this.setState({
+        Spot33: snapshot.val() 
+      })
+    })
   }
 
   render () {
@@ -259,327 +322,314 @@ export class IthanGarage extends Component {
     let overlay6;
     let overlay7;
     let overlay8;
-    let floorText;
+    let overlay9;
+    let overlay10;
+    let overlay11;
+    // let floorText;
     if(selectedIndex == 0){
        floorText = floor1Spots;
        if(this.state.Spot1 == "Full"){
-        overlay = <View style={{paddingLeft: 20, paddingTop: 40, width: 94}}>
+        overlay = <View style={{paddingLeft: 36, paddingTop: 40, width: 77}}>
           <Badge containerStyle={{ backgroundColor: 'red'}}>
-            <Text>Full</Text>
+            <Text style={{color: 'white', fontSize: 30}}>X</Text>
           </Badge>
         </View>;
         } else {
-          overlay = <View style={{paddingLeft: 20, paddingTop: 40, width: 94}}>
-          <Badge containerStyle={{ backgroundColor: 'green'}}>
-            <Text>Open</Text>
-          </Badge>
-        </View>;
+          overlay = <View style={{paddingLeft: 36, paddingTop: 40, width: 77, height: 82}}></View>;
         }
         if(this.state.Spot2 == "Full"){
-          overlay2 = <View style={{paddingLeft: 13, paddingTop: 40, width: 87}}>
+          overlay2 = <View style={{paddingLeft: 47, paddingTop: 40, width: 88}}>
             <Badge containerStyle={{ backgroundColor: 'red'}}>
-              <Text>Full</Text>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
             </Badge>
           </View>;
         } else {
-          overlay2 = <View style={{paddingLeft: 13, paddingTop: 40, width: 87}}>
-          <Badge containerStyle={{ backgroundColor: 'green'}}>
-            <Text>Open</Text>
-          </Badge>
-        </View>;
+          overlay2 = <View style={{paddingLeft: 47, paddingTop: 40, width: 88, height: 82}}></View>;
         }
         if(this.state.Spot3 == "Full"){
-          overlay3 = <View style={{paddingLeft: 13, paddingTop: 40, width: 87}}>
+          overlay3 = <View style={{paddingLeft: 47, paddingTop: 40, width: 88}}>
             <Badge containerStyle={{ backgroundColor: 'red'}}>
-              <Text>Full</Text>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
             </Badge>
           </View>;
         } else {
-          overlay3 = <View style={{paddingLeft: 13, paddingTop: 40, width: 87}}>
-          <Badge containerStyle={{ backgroundColor: 'green'}}>
-            <Text>Open</Text>
-          </Badge>
-        </View>;
+          overlay3 = <View style={{paddingLeft: 47, paddingTop: 40, width: 88, height: 82}}></View>;
         }
         if(this.state.Spot4 == "Full"){
-          overlay4 = <View style={{paddingLeft: 13, paddingTop: 40, width: 87}}>
+          overlay4 = <View style={{paddingLeft: 36, paddingTop: 144, width: 77}}>
             <Badge containerStyle={{ backgroundColor: 'red'}}>
-              <Text>Full</Text>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
             </Badge>
           </View>;
         } else {
-          overlay4 = <View style={{paddingLeft: 13, paddingTop: 40, width: 87}}>
-          <Badge containerStyle={{ backgroundColor: 'green'}}>
-            <Text>Open</Text>
-          </Badge>
-        </View>;
+          overlay4 = <View style={{paddingLeft: 36, paddingTop: 144, width: 77, height: 102}}></View>;
         }
         if(this.state.Spot5 == "Full"){
-          overlay5 = <View style={{paddingLeft: 20, paddingTop: 75, width: 94}}>
+          overlay5 = <View style={{paddingLeft: 47, paddingTop: 144, width: 88}}>
             <Badge containerStyle={{ backgroundColor: 'red'}}>
-              <Text>Full</Text>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
             </Badge>
           </View>;
         } else {
-          overlay5 = <View style={{paddingLeft: 20, paddingTop: 75, width: 87}}>
-          <Badge containerStyle={{ backgroundColor: 'green'}}>
-            <Text>Open</Text>
-          </Badge>
-        </View>;
+          overlay5 = <View style={{paddingLeft: 47, paddingTop: 144, width: 88, height: 102}}></View>;
         }
         if(this.state.Spot6 == "Full"){
-          overlay6 = <View style={{paddingLeft: 13, paddingTop: 75, width: 87}}>
+          overlay6 = <View style={{paddingLeft: 47, paddingTop: 144, width: 88}}>
             <Badge containerStyle={{ backgroundColor: 'red'}}>
-              <Text>Full</Text>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
             </Badge>
           </View>;
         } else {
-          overlay6 = <View style={{paddingLeft: 13, paddingTop: 75, width: 87}}>
-          <Badge containerStyle={{ backgroundColor: 'green'}}>
-            <Text>Open</Text>
-          </Badge>
-        </View>;
+          overlay6 = <View style={{paddingLeft: 47, paddingTop: 144, width: 88, height: 102}}></View>;
         }
         if(this.state.Spot7 == "Full"){
-          overlay7 = <View style={{paddingLeft: 13, paddingTop: 75, width: 87}}>
+          overlay7 = <View style={{paddingLeft: 47, paddingTop: 144, width: 88}}>
             <Badge containerStyle={{ backgroundColor: 'red'}}>
-              <Text>Full</Text>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
             </Badge>
           </View>;
         } else {
-          overlay7 = <View style={{paddingLeft: 13, paddingTop: 75, width: 87}}>
-          <Badge containerStyle={{ backgroundColor: 'green'}}>
-            <Text>Open</Text>
-          </Badge>
-        </View>;
+          overlay7 = <View style={{paddingLeft: 47, paddingTop: 144, width: 88, height: 102}}></View>;
         }
         if(this.state.Spot8 == "Full"){
-          overlay8 = <View style={{paddingLeft: 13, paddingTop: 75, width: 87}}>
+          overlay8 = <View style={{paddingLeft: 36, paddingTop: 70, width: 77}}>
             <Badge containerStyle={{ backgroundColor: 'red'}}>
-              <Text>Full</Text>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
             </Badge>
           </View>;
         } else {
-          overlay8 = <View style={{paddingLeft: 13, paddingTop: 75, width: 87}}>
-          <Badge containerStyle={{ backgroundColor: 'green'}}>
-            <Text>Open</Text>
-          </Badge>
-        </View>;
+          overlay8 = <View style={{paddingLeft: 36, paddingTop: 70, width: 77, height: 82}}></View>;
+        }
+        if(this.state.Spot9 == "Full"){
+          overlay9 = <View style={{paddingLeft: 47, paddingTop: 70, width: 88}}>
+            <Badge containerStyle={{ backgroundColor: 'red'}}>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
+            </Badge>
+          </View>;
+        } else {
+          overlay9 = <View style={{paddingLeft: 47, paddingTop: 70, width: 88, height: 82}}></View>;
+        }
+        if(this.state.Spot10 == "Full"){
+          overlay10 = <View style={{paddingLeft: 47, paddingTop: 70, width: 88}}>
+            <Badge containerStyle={{ backgroundColor: 'red'}}>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
+            </Badge>
+          </View>;
+        } else {
+          overlay10 = <View style={{paddingLeft: 47, paddingTop: 70, width: 88, height: 82}}></View>;
+        }
+        if(this.state.Spot11 == "Full"){
+          overlay11 = <View style={{paddingLeft: 47, paddingTop: 70, width: 88}}>
+            <Badge containerStyle={{ backgroundColor: 'red'}}>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
+            </Badge>
+          </View>;
+        } else {
+          overlay11 = <View style={{paddingLeft: 47, paddingTop: 70, width: 88, height: 82}}></View>;
         }
     } else if (selectedIndex == 1){
        floorText = floor2Spots;
-       if(this.state.Spot9 == "Full"){
-        overlay = <View style={{paddingLeft: 20, paddingTop: 40, width: 94}}>
+       if(this.state.Spot12 == "Full"){
+        overlay = <View style={{paddingLeft: 36, paddingTop: 40, width: 77}}>
           <Badge containerStyle={{ backgroundColor: 'red'}}>
-            <Text>Full</Text>
+            <Text style={{color: 'white', fontSize: 30}}>X</Text>
           </Badge>
         </View>;
         } else {
-          overlay = <View style={{paddingLeft: 20, paddingTop: 40, width: 94}}>
-          <Badge containerStyle={{ backgroundColor: 'green'}}>
-            <Text>Open</Text>
-          </Badge>
-        </View>;
-        }
-        if(this.state.Spot10 == "Full"){
-          overlay2 = <View style={{paddingLeft: 13, paddingTop: 40, width: 87}}>
-            <Badge containerStyle={{ backgroundColor: 'red'}}>
-              <Text>Full</Text>
-            </Badge>
-          </View>;
-        } else {
-          overlay2 = <View style={{paddingLeft: 13, paddingTop: 40, width: 87}}>
-          <Badge containerStyle={{ backgroundColor: 'green'}}>
-            <Text>Open</Text>
-          </Badge>
-        </View>;
-        }
-        if(this.state.Spot11 == "Full"){
-          overlay3 = <View style={{paddingLeft: 13, paddingTop: 40, width: 87}}>
-            <Badge containerStyle={{ backgroundColor: 'red'}}>
-              <Text>Full</Text>
-            </Badge>
-          </View>;
-        } else {
-          overlay3 = <View style={{paddingLeft: 13, paddingTop: 40, width: 87}}>
-          <Badge containerStyle={{ backgroundColor: 'green'}}>
-            <Text>Open</Text>
-          </Badge>
-        </View>;
-        }
-        if(this.state.Spot12 == "Full"){
-          overlay4 = <View style={{paddingLeft: 13, paddingTop: 40, width: 87}}>
-            <Badge containerStyle={{ backgroundColor: 'red'}}>
-              <Text>Full</Text>
-            </Badge>
-          </View>;
-        } else {
-          overlay4 = <View style={{paddingLeft: 13, paddingTop: 40, width: 87}}>
-          <Badge containerStyle={{ backgroundColor: 'green'}}>
-            <Text>Open</Text>
-          </Badge>
-        </View>;
+          overlay = <View style={{paddingLeft: 36, paddingTop: 40, width: 77, height: 82}}></View>;
         }
         if(this.state.Spot13 == "Full"){
-          overlay5 = <View style={{paddingLeft: 20, paddingTop: 75, width: 94}}>
+          overlay2 = <View style={{paddingLeft: 47, paddingTop: 40, width: 88}}>
             <Badge containerStyle={{ backgroundColor: 'red'}}>
-              <Text>Full</Text>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
             </Badge>
           </View>;
         } else {
-          overlay5 = <View style={{paddingLeft: 20, paddingTop: 75, width: 87}}>
-          <Badge containerStyle={{ backgroundColor: 'green'}}>
-            <Text>Open</Text>
-          </Badge>
-        </View>;
+          overlay2 = <View style={{paddingLeft: 47, paddingTop: 40, width: 88, height: 82}}></View>;
         }
         if(this.state.Spot14 == "Full"){
-          overlay6 = <View style={{paddingLeft: 13, paddingTop: 75, width: 87}}>
+          overlay3 = <View style={{paddingLeft: 47, paddingTop: 40, width: 88}}>
             <Badge containerStyle={{ backgroundColor: 'red'}}>
-              <Text>Full</Text>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
             </Badge>
           </View>;
         } else {
-          overlay6 = <View style={{paddingLeft: 13, paddingTop: 75, width: 87}}>
-          <Badge containerStyle={{ backgroundColor: 'green'}}>
-            <Text>Open</Text>
-          </Badge>
-        </View>;
+          overlay3 = <View style={{paddingLeft: 47, paddingTop: 40, width: 88, height: 82}}></View>;
         }
         if(this.state.Spot15 == "Full"){
-          overlay7 = <View style={{paddingLeft: 13, paddingTop: 75, width: 87}}>
+          overlay4 = <View style={{paddingLeft: 36, paddingTop: 144, width: 77}}>
             <Badge containerStyle={{ backgroundColor: 'red'}}>
-              <Text>Full</Text>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
             </Badge>
           </View>;
         } else {
-          overlay7 = <View style={{paddingLeft: 13, paddingTop: 75, width: 87}}>
-          <Badge containerStyle={{ backgroundColor: 'green'}}>
-            <Text>Open</Text>
-          </Badge>
-        </View>;
+          overlay4 = <View style={{paddingLeft: 36, paddingTop: 144, width: 77, height: 82}}></View>;
         }
         if(this.state.Spot16 == "Full"){
-          overlay8 = <View style={{paddingLeft: 13, paddingTop: 75, width: 87}}>
+          overlay5 = <View style={{paddingLeft: 47, paddingTop: 144, width: 88}}>
             <Badge containerStyle={{ backgroundColor: 'red'}}>
-              <Text>Full</Text>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
             </Badge>
           </View>;
         } else {
-          overlay8 = <View style={{paddingLeft: 13, paddingTop: 75, width: 87}}>
-          <Badge containerStyle={{ backgroundColor: 'green'}}>
-            <Text>Open</Text>
-          </Badge>
-        </View>;
+          overlay5 = <View style={{paddingLeft: 47, paddingTop: 144, width: 88, height: 82}}></View>;
+        }
+        if(this.state.Spot17 == "Full"){
+          overlay6 = <View style={{paddingLeft: 47, paddingTop: 144, width: 88}}>
+            <Badge containerStyle={{ backgroundColor: 'red'}}>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
+            </Badge>
+          </View>;
+        } else {
+          overlay6 = <View style={{paddingLeft: 47, paddingTop: 144, width: 88, height: 82}}></View>;
+        }
+        if(this.state.Spot18 == "Full"){
+          overlay7 = <View style={{paddingLeft: 47, paddingTop: 144, width: 88}}>
+            <Badge containerStyle={{ backgroundColor: 'red'}}>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
+            </Badge>
+          </View>;
+        } else {
+          overlay7 = <View style={{paddingLeft: 47, paddingTop: 144, width: 88, height: 82}}></View>;
+        }
+        if(this.state.Spot19 == "Full"){
+          overlay8 = <View style={{paddingLeft: 36, paddingTop: 70, width: 77}}>
+            <Badge containerStyle={{ backgroundColor: 'red'}}>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
+            </Badge>
+          </View>;
+        } else {
+          overlay8 = <View style={{paddingLeft: 36, paddingTop: 70, width: 77, height: 82}}></View>;
+        }
+        if(this.state.Spot20 == "Full"){
+          overlay9 = <View style={{paddingLeft: 47, paddingTop: 70, width: 88}}>
+            <Badge containerStyle={{ backgroundColor: 'red'}}>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
+            </Badge>
+          </View>;
+        } else {
+          overlay9 = <View style={{paddingLeft: 47, paddingTop: 70, width: 88, height: 82}}></View>;
+        }
+        if(this.state.Spot21 == "Full"){
+          overlay10 = <View style={{paddingLeft: 47, paddingTop: 70, width: 88}}>
+            <Badge containerStyle={{ backgroundColor: 'red'}}>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
+            </Badge>
+          </View>;
+        } else {
+          overlay10 = <View style={{paddingLeft: 47, paddingTop: 70, width: 88, height: 82}}></View>;
+        }
+        if(this.state.Spot22 == "Full"){
+          overlay11 = <View style={{paddingLeft: 47, paddingTop: 70, width: 88}}>
+            <Badge containerStyle={{ backgroundColor: 'red'}}>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
+            </Badge>
+          </View>;
+        } else {
+          overlay11 = <View style={{paddingLeft: 47, paddingTop: 70, width: 88, height: 82}}></View>;
         }
     } else {
        floorText = floor3Spots;
-       if(this.state.Spot17 == "Full"){
-        overlay = <View style={{paddingLeft: 20, paddingTop: 40, width: 94}}>
+       if(this.state.Spot23 == "Full"){
+        overlay = <View style={{paddingLeft: 36, paddingTop: 40, width: 77}}>
           <Badge containerStyle={{ backgroundColor: 'red'}}>
-            <Text>Full</Text>
+            <Text style={{color: 'white', fontSize: 30}}>X</Text>
           </Badge>
         </View>;
         } else {
-          overlay = <View style={{paddingLeft: 20, paddingTop: 40, width: 94}}>
-          <Badge containerStyle={{ backgroundColor: 'green'}}>
-            <Text>Open</Text>
-          </Badge>
-        </View>;
-        }
-        if(this.state.Spot118 == "Full"){
-          overlay2 = <View style={{paddingLeft: 13, paddingTop: 40, width: 87}}>
-            <Badge containerStyle={{ backgroundColor: 'red'}}>
-              <Text>Full</Text>
-            </Badge>
-          </View>;
-        } else {
-          overlay2 = <View style={{paddingLeft: 13, paddingTop: 40, width: 87}}>
-          <Badge containerStyle={{ backgroundColor: 'green'}}>
-            <Text>Open</Text>
-          </Badge>
-        </View>;
-        }
-        if(this.state.Spot19 == "Full"){
-          overlay3 = <View style={{paddingLeft: 13, paddingTop: 40, width: 87}}>
-            <Badge containerStyle={{ backgroundColor: 'red'}}>
-              <Text>Full</Text>
-            </Badge>
-          </View>;
-        } else {
-          overlay3 = <View style={{paddingLeft: 13, paddingTop: 40, width: 87}}>
-          <Badge containerStyle={{ backgroundColor: 'green'}}>
-            <Text>Open</Text>
-          </Badge>
-        </View>;
-        }
-        if(this.state.Spot20 == "Full"){
-          overlay4 = <View style={{paddingLeft: 13, paddingTop: 40, width: 87}}>
-            <Badge containerStyle={{ backgroundColor: 'red'}}>
-              <Text>Full</Text>
-            </Badge>
-          </View>;
-        } else {
-          overlay4 = <View style={{paddingLeft: 13, paddingTop: 40, width: 87}}>
-          <Badge containerStyle={{ backgroundColor: 'green'}}>
-            <Text>Open</Text>
-          </Badge>
-        </View>;
-        }
-        if(this.state.Spot21 == "Full"){
-          overlay5 = <View style={{paddingLeft: 20, paddingTop: 75, width: 94}}>
-            <Badge containerStyle={{ backgroundColor: 'red'}}>
-              <Text>Full</Text>
-            </Badge>
-          </View>;
-        } else {
-          overlay5 = <View style={{paddingLeft: 20, paddingTop: 75, width: 87}}>
-          <Badge containerStyle={{ backgroundColor: 'green'}}>
-            <Text>Open</Text>
-          </Badge>
-        </View>;
-        }
-        if(this.state.Spot22 == "Full"){
-          overlay6 = <View style={{paddingLeft: 13, paddingTop: 75, width: 87}}>
-            <Badge containerStyle={{ backgroundColor: 'red'}}>
-              <Text>Full</Text>
-            </Badge>
-          </View>;
-        } else {
-          overlay6 = <View style={{paddingLeft: 13, paddingTop: 75, width: 87}}>
-          <Badge containerStyle={{ backgroundColor: 'green'}}>
-            <Text>Open</Text>
-          </Badge>
-        </View>;
-        }
-        if(this.state.Spot23 == "Full"){
-          overlay7 = <View style={{paddingLeft: 13, paddingTop: 75, width: 87}}>
-            <Badge containerStyle={{ backgroundColor: 'red'}}>
-              <Text>Full</Text>
-            </Badge>
-          </View>;
-        } else {
-          overlay7 = <View style={{paddingLeft: 13, paddingTop: 75, width: 87}}>
-          <Badge containerStyle={{ backgroundColor: 'green'}}>
-            <Text>Open</Text>
-          </Badge>
-        </View>;
+          overlay = <View style={{paddingLeft: 36, paddingTop: 40, width: 77, height: 82}}></View>;
         }
         if(this.state.Spot24 == "Full"){
-          overlay8 = <View style={{paddingLeft: 13, paddingTop: 75, width: 87}}>
+          overlay2 = <View style={{paddingLeft: 47, paddingTop: 40, width: 88}}>
             <Badge containerStyle={{ backgroundColor: 'red'}}>
-              <Text>Full</Text>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
             </Badge>
           </View>;
         } else {
-          overlay8 = <View style={{paddingLeft: 13, paddingTop: 75, width: 87}}>
-          <Badge containerStyle={{ backgroundColor: 'green'}}>
-            <Text>Open</Text>
-          </Badge>
-        </View>;
+          overlay2 = <View style={{paddingLeft: 47, paddingTop: 40, width: 88, height: 82}}></View>;
+        }
+        if(this.state.Spot25 == "Full"){
+          overlay3 = <View style={{paddingLeft: 47, paddingTop: 40, width: 88}}>
+            <Badge containerStyle={{ backgroundColor: 'red'}}>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
+            </Badge>
+          </View>;
+        } else {
+          overlay3 = <View style={{paddingLeft: 47, paddingTop: 40, width: 88, height: 82}}></View>;
+        }
+        if(this.state.Spot26 == "Full"){
+          overlay4 = <View style={{paddingLeft: 36, paddingTop: 144, width: 77}}>
+            <Badge containerStyle={{ backgroundColor: 'red'}}>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
+            </Badge>
+          </View>;
+        } else {
+          overlay4 = <View style={{paddingLeft: 36, paddingTop: 144, width: 77, height: 162}}></View>;
+        }
+        if(this.state.Spot27 == "Full"){
+          overlay5 = <View style={{paddingLeft: 47, paddingTop: 144, width: 88}}>
+            <Badge containerStyle={{ backgroundColor: 'red'}}>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
+            </Badge>
+          </View>;
+        } else {
+          overlay5 = <View style={{paddingLeft: 47, paddingTop: 144, width: 88, height: 82}}></View>;
+        }
+        if(this.state.Spot28 == "Full"){
+          overlay6 = <View style={{paddingLeft: 47, paddingTop: 144, width: 88}}>
+            <Badge containerStyle={{ backgroundColor: 'red'}}>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
+            </Badge>
+          </View>;
+        } else {
+          overlay6 = <View style={{paddingLeft: 47, paddingTop: 144, width: 88, height: 82}}></View>;
+        }
+        if(this.state.Spot29 == "Full"){
+          overlay7 = <View style={{paddingLeft: 47, paddingTop: 144, width: 88}}>
+            <Badge containerStyle={{ backgroundColor: 'red'}}>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
+            </Badge>
+          </View>;
+        } else {
+          overlay7 = <View style={{paddingLeft: 47, paddingTop: 144, width: 88, height: 82}}></View>;
+        }
+        if(this.state.Spot30 == "Full"){
+          overlay8 = <View style={{paddingLeft: 36, paddingTop: 70, width: 77}}>
+            <Badge containerStyle={{ backgroundColor: 'red'}}>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
+            </Badge>
+          </View>;
+        } else {
+          overlay8 = <View style={{paddingLeft: 36, paddingTop: 70, width: 77, height: 82}}></View>;
+        }
+        if(this.state.Spot31 == "Full"){
+          overlay9 = <View style={{paddingLeft: 47, paddingTop: 70, width: 88}}>
+            <Badge containerStyle={{ backgroundColor: 'red'}}>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
+            </Badge>
+          </View>;
+        } else {
+          overlay9 = <View style={{paddingLeft: 47, paddingTop: 70, width: 88, height: 82}}></View>;
+        }
+        if(this.state.Spot32 == "Full"){
+          overlay10 = <View style={{paddingLeft: 47, paddingTop: 70, width: 88}}>
+            <Badge containerStyle={{ backgroundColor: 'red'}}>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
+            </Badge>
+          </View>;
+        } else {
+          overlay10 = <View style={{paddingLeft: 47, paddingTop: 70, width: 88, height: 82}}></View>;
+        }
+        if(this.state.Spot33 == "Full"){
+          overlay11 = <View style={{paddingLeft: 47, paddingTop: 70, width: 88}}>
+            <Badge containerStyle={{ backgroundColor: 'red'}}>
+              <Text style={{color: 'white', fontSize: 30}}>X</Text>
+            </Badge>
+          </View>;
+        } else {
+          overlay11 = <View style={{paddingLeft: 47, paddingTop: 70, width: 88, height: 82}}></View>;
         }
     }
-  
     return (
       <ScrollView>
         <View>
@@ -593,7 +643,7 @@ export class IthanGarage extends Component {
         <Text></Text>
         <View>
           <Image 
-            style={{position: 'absolute', width: 374, height: 200}}
+            style={{position: 'absolute', width: 374, height: 430}}
             source={this.state.selectedImage}
           />
         </View>
@@ -601,15 +651,20 @@ export class IthanGarage extends Component {
           {overlay}
           {overlay2}
           {overlay3}
-          {overlay4}
         </View>
         <View style={{flexDirection: "row"}}>
+          {overlay4}
           {overlay5}
           {overlay6}
           {overlay7}
-          {overlay8}
         </View>
-        {floorText}
+        <View style={{flexDirection: "row"}}>
+          {overlay8}
+          {overlay9}
+          {overlay10}
+          {overlay11}
+        </View>
+        {/* {floorText} */}
         </View>
         </ScrollView>
     )

@@ -37,7 +37,7 @@ export class Locations extends Component {
           />
           <Text></Text>
           <Button onPress={showAlert}
-          title="Giant" 
+          title="Giant Grocery Store" 
           color="#FFF"
           icon={{name: 'directions-car'}}
           fontSize={21}
